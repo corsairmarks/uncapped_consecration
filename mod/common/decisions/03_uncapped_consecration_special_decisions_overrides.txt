@@ -10,9 +10,7 @@ decision_consecrated_worlds = {
 		exists = space_owner
 		exists = from
 		space_owner = { is_same_value = from }
-		from = {
-			has_ascension_perk = ap_consecrated_worlds
-		}
+		from = { has_ascension_perk = ap_consecrated_worlds }
 		is_star = no
 		is_artificial = no
 		is_ringworld = no
@@ -25,22 +23,28 @@ decision_consecrated_worlds = {
 		}
 	}
 	allow = {
-		custom_tooltip = {
-			from = {
-				count_owned_planet = {
-					limit = {
-						has_planet_flag = consecrated@prev
-						OR = {
-							has_modifier = consecrated_quality_1
-							has_modifier = consecrated_quality_2
-							has_modifier = consecrated_quality_3
-							has_modifier = consecrated_quality_4
-						}
-					}
-					count < 3
-				}
+		if = {
+			limit = {
+				exists = event_target:global_event_country
+				event_target:global_event_country = { is_variable_set = max_consecrated_planets_per_country }
 			}
-			fail_text = consecrated_worlds_too_many
+			custom_tooltip = {
+				from = {
+					count_planet_within_border = {
+						limit = {
+							has_planet_flag = consecrated@prev
+							OR = {
+								has_modifier = consecrated_quality_1
+								has_modifier = consecrated_quality_2
+								has_modifier = consecrated_quality_3
+								has_modifier = consecrated_quality_4
+							}
+						}
+						count < event_target:global_event_country.max_consecrated_planets_per_country
+					}
+				}
+				fail_text = consecrated_worlds_too_many
+			}
 		}
 		custom_tooltip = {
 			NOT = { exists = owner }
@@ -146,7 +150,12 @@ decision_consecrated_worlds = {
 			NOT = {
 				space_owner = {
 					any_owned_species = {
-						prevprev = { habitability = { who = prev value > 0.35 }	}
+						prevprev = {
+							habitability = {
+								who = prev
+								value > 0.35
+							}
+						}
 					}
 				}
 			}
@@ -164,9 +173,7 @@ decision_unconsecrated_worlds = {
 	}
 	potential = {
 		exists = from
-		from = {
-			has_ascension_perk = ap_consecrated_worlds
-		}
+		from = { has_ascension_perk = ap_consecrated_worlds }
 		has_planet_flag = consecrated@from
 	}
 	allow = {
