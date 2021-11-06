@@ -1,0 +1,63 @@
+# this = country, consecrator
+recalculate_consecrated_world_modifier = {
+    if = {
+        limit = { has_modifier = consecrated_modifier_1 }
+        remove_modifier = consecrated_modifier_1
+    }
+    set_variable = {
+        which = num_consecrated_planets
+        value = 0
+    }
+    every_galaxy_planet = {
+        limit = {
+            has_planet_flag = consecrated@prev
+            OR = {
+                has_modifier = consecrated_quality_1
+                has_modifier = consecrated_quality_2
+                has_modifier = consecrated_quality_3
+                has_modifier = consecrated_quality_4
+            }
+        }
+        if = {
+            limit = { has_modifier = consecrated_quality_1 }
+            prev = {
+                change_variable = {
+                    which = num_consecrated_planets
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = { has_modifier = consecrated_quality_2 }
+            prev = {
+                change_variable = {
+                    which = num_consecrated_planets
+                    value = 2
+                }
+            }
+        }
+        else_if = {
+            limit = { has_modifier = consecrated_quality_3 }
+            prev = {
+                change_variable = {
+                    which = num_consecrated_planets
+                    value = 3
+                }
+            }
+        }
+        else_if = {
+            limit = { has_modifier = consecrated_quality_4 }
+            prev = {
+                change_variable = {
+                    which = num_consecrated_planets
+                    value = 4
+                }
+            }
+        }
+    }
+    add_modifier = {
+        modifier = consecrated_modifier_1
+        multiplier = num_consecrated_planets
+    }
+    clear_variable = num_consecrated_planets
+}

@@ -1,0 +1,15 @@
+# fired when the game starts
+on_game_start = {
+	events = {
+		uncapped_consecration.13 # flag mod as installed
+		uncapped_consecration.1 # setup menu
+	}
+}
+
+# fired when loading a single-player game
+on_single_player_save_game_load = {
+	events = {
+		uncapped_consecration.13 # flag mod as installed
+		uncapped_consecration.1 # setup menu
+	}
+}

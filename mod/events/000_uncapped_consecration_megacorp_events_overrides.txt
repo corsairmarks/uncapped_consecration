@@ -1,0 +1,78 @@
+namespace = mega
+
+# Colonized Consecrated World
+# on_colonization_started
+# root = planet
+planet_event = {
+	id = mega.110
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_planet_flag = consecrated@space_owner
+	}
+	immediate = {
+		switch = {
+			trigger = has_modifier
+			consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
+			consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
+			consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
+			consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
+		}
+		space_owner = { recalculate_consecrated_world_modifier = yes }
+	}
+}
+
+# Lost Consecrated World
+# on_system_lost
+# root = country (previous owner), if one exists -- otherwise don't/won't/can't fire)
+# from = system
+# fromfrom = country (new owner)
+country_event = {
+	id = mega.100
+	title = mega.100.name
+	desc = mega.100.desc
+	picture = GFX_evt_ruined_system
+	show_sound = event_planetary_riot
+	location = from
+	is_triggered_only = yes
+	trigger = {
+		exists = root
+		has_ascension_perk = ap_consecrated_worlds
+		from = { any_system_planet = { has_planet_flag = consecrated@root } }
+	}
+	immediate = {
+		from = {
+			every_system_planet = {
+				limit = { has_planet_flag = consecrated@root }
+				remove_planet_flag = consecrated@root
+				switch = {
+					trigger = has_modifier
+					consecrated_quality_4 = { remove_modifier = consecrated_quality_4 } # original file has a bug here - was removing consecrated_quality_3
+					consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
+					consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
+					consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
+				}
+				root = { recalculate_consecrated_world_modifier = yes }
+			}
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = consecrated_worlds_mourning }
+				remove_modifier = consecrated_worlds_mourning
+			}
+			add_modifier = {
+				modifier = consecrated_worlds_mourning
+				years = 5
+			}
+		}
+		tooltip = {
+			add_modifier = {
+				modifier = consecrated_worlds_mourning
+				years = 5
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+namespace = uncapped_consecration
+
+# flag mod as active
+event = {
+	id = uncapped_consecration.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = uncapped_consecration_installed }
+	}
+	immediate = {
+		set_global_flag = uncapped_consecration_installed
+	}
+}
+
+# triggered by on_game_start and on_single_player_save_game_load
+country_event = {
+	id = uncapped_consecration.1
+	title = uncapped_consecration.1.title
+	desc = uncapped_consecration.1.desc
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = uncapped_consecration.1.a
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.b
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.c
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.d
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 4
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.e
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.f
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.g
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 7
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.h
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.i
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 9
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.j
+		hidden_effect = {
+			event_target:global_event_country = {
+				set_variable = {
+					which = maximum_consecrated_planets_per_country
+					value = 10
+				}
+			}
+		}
+	}
+	option = {
+		name = uncapped_consecration.1.k
+	}
+	after = {
+		hidden_effect = {
+			set_global_flag = uncapped_consecration_initial_config
+		}
+	}
+}
+
+# triggered by on_game_start and on_single_player_save_game_load
+event = {
+	id = uncapped_consecration.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = uncapped_consecration_initial_config }
+
+		# is_multiplayer = yes
+	}
+	immediate = {
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = flag_test@this
+			country_event = {
+				id = uncapped_consecration.1
+			}
+			log = "processed country [This.GetRealName]"
+			break = yes
+		}
+		set_global_flag = uncapped_consecration_initial_config
+	}
+}
