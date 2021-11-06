@@ -18,6 +18,7 @@ country_event = {
 	id = uncapped_consecration.1
 	title = uncapped_consecration.1.title
 	desc = uncapped_consecration.1.desc
+	picture = GFX_evt_conclave
 	is_triggered_only = yes
 	trigger = {
 		is_ai = no
@@ -153,11 +154,9 @@ event = {
 	immediate = {
 		every_country = {
 			limit = { is_ai = no }
-			set_country_flag = flag_test@this
 			country_event = {
 				id = uncapped_consecration.1
 			}
-			log = "processed country [This.GetRealName]"
 			break = yes
 		}
 		set_global_flag = uncapped_consecration_initial_config
