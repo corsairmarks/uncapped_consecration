@@ -2,7 +2,7 @@
 on_game_start = {
 	events = {
 		uncapped_consecration.13 # flag mod as installed
-		uncapped_consecration.1 # setup menu
+		uncapped_consecration.2 # setup menu
 	}
 }
 
@@ -10,6 +10,6 @@ on_game_start = {
 on_single_player_save_game_load = {
 	events = {
 		uncapped_consecration.13 # flag mod as installed
-		uncapped_consecration.1 # setup menu
+		uncapped_consecration.2 # setup menu
 	}
 }
