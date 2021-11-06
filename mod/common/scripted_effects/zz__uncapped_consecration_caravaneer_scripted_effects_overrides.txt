@@ -59,5 +59,4 @@ recalculate_consecrated_world_modifier = {
         modifier = consecrated_modifier_1
         multiplier = num_consecrated_planets
     }
-    clear_variable = num_consecrated_planets
 }
