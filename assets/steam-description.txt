@@ -30,7 +30,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
 
 [h2]Changelog[/h2]
 
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2648945546]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
