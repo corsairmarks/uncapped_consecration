@@ -1,0 +1,15 @@
+entity = {
+	name = "decision_god_ray_entity"
+	scale = 0.25
+	locator = {
+		name = "root"
+		position = { 0 25 0 }
+		rotation = { 0 90 0 }
+	}
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 1
+	}
+	attach = { root = "colossus_god_ray_hit_entity"}
+}

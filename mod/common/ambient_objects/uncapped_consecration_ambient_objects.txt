@@ -1,0 +1,6 @@
+ambient_object = {
+	name = "consecration_divine_object"
+	entity = "decision_god_ray_entity"
+	selectable = no
+	show_name = no
+}

@@ -136,6 +136,7 @@ decision_consecrated_worlds = {
 				# fallback
 				add_modifier = { modifier = consecrated_quality_1 }
 			}
+			spawn_consecration_divine_effect = yes
 			from = {
 				# recalculate country modifier
 				recalculate_consecrated_world_modifier = yes
