@@ -1,4 +1,4 @@
-name="Uncapped Consecration"
+name="Consecrated Worlds: Adjustable Limit"
 tags={
 	"Economy"
 	"Gameplay"
