@@ -8,6 +8,7 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		exists = space_owner
 		has_planet_flag = consecrated@space_owner
 	}
 	immediate = {
@@ -52,9 +53,9 @@ country_event = {
 					consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
 					consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
 				}
-				root = { recalculate_consecrated_world_modifier = yes }
 			}
 		}
+		recalculate_consecrated_world_modifier = yes
 	}
 	option = {
 		name = UNFORTUNATE
