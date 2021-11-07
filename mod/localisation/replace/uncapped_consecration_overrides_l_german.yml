@@ -1,0 +1,4 @@
+﻿l_german:
+ describe_edict_consectrated_worlds: "§EUnbewohnte Planeten zu weihen[This.GetLimitConsecratedPlanets] erhöht die §Yspirituelle Anziehung§! und §Yreichsweiten Dienstleistungen§! sowie die £unity£ §YEinigkeitsproduktion§!, die mit der spirituellen Bedeutung der geweihten Welten skaliert.§!"
+ decision_consecrated_worlds_effects_custom: "Fügt diese Welt unserem Kanon von geweihten Welten hinzu[This.GetLimitConsecratedPlanets], was die §YEthikanziehung für Spiritualisten§!, unsere §Yreichsweiten Dienstleistungen§! und unsere £unity£ §YEinigkeitsproduktion§! erhöht und mit der spirituellen Bedeutung des Planeten skaliert."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RWir haben bereits §Y[This.GetMaximumConsecratedPlanets]§! Welten geweiht§! §H(Ihr müsst erst eine andere entweihen, um diese weihen zu können)§!"

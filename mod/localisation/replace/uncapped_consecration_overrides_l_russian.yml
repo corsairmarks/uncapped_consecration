@@ -1,0 +1,4 @@
+﻿l_russian:
+ describe_edict_consectrated_worlds: "§EОсвящение необитаемых миров[This.GetLimitConsecratedPlanets] повышает §Yпривлекательность принципа Спиритуализм§! и §Yобщеимперские блага§!, а также наращивает производство £unity£ §Yединства§! в соответствии с духовным значением освященных миров.§!"
+ decision_consecrated_worlds_effects_custom: "Добавляет этот мир к нашим сакральным мирам[This.GetLimitConsecratedPlanets], повышая §Yпривлекательность принципа Спиритуализм§!, §Yобщеимперские блага§! и производство £unity£ §Yединства§!, в зависимости от духовного значения планеты."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RМы уже освятили §Y[This.GetMaximumConsecratedPlanets]§! мира§!. §H(Отмените освящение другого мира, чтобы освятить этот)§!"

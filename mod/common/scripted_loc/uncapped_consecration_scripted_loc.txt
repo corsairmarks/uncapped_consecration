@@ -1,0 +1,39 @@
+defined_text = { # any scope
+	name = GetLimitConsecratedPlanets
+	text = {
+		trigger = {
+			exists = event_target:global_event_country
+			event_target:global_event_country = { is_variable_set = max_consecrated_planets_per_country }
+		}
+		localization_key = limit_consecrated_planets
+	}
+	text = {
+		trigger = {
+			NOR = {
+				exists = event_target:global_event_country
+				event_target:global_event_country = { is_variable_set = max_consecrated_planets_per_country }
+			}
+		}
+		localization_key = BLANK_STRING
+	}
+}
+
+defined_text = { # any scope
+	name = GetMaximumConsecratedPlanets
+	text = {
+		trigger = {
+			exists = event_target:global_event_country
+			event_target:global_event_country = { is_variable_set = max_consecrated_planets_per_country }
+		}
+		localization_key = numeric_consecrated_planets_per_country
+	}
+	text = {
+		trigger = {
+			NOR = {
+				exists = event_target:global_event_country
+				event_target:global_event_country = { is_variable_set = max_consecrated_planets_per_country }
+			}
+		}
+		localization_key = BLANK_STRING
+	}
+}

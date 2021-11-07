@@ -1,0 +1,4 @@
+﻿l_spanish:
+ describe_edict_consectrated_worlds: "§EConsagrar planetas deshabitados[This.GetLimitConsecratedPlanets] aumenta la §Yatracción de ética espiritualista§! y los §Yservicios en todo el imperio§!, así como la £unity£ §Ygeneración de unidad§!, en proporción a la relevancia espiritual de los planetas consagrados.§!"
+ decision_consecrated_worlds_effects_custom: "Añade este mundo a nuestro canon de mundos consagrados[This.GetLimitConsecratedPlanets], lo que aumenta la §Yatracción de ética espiritualista§!, los §Yservicios en todo el imperio§! y la £unity£ §Ygeneración de unidad§!. Esto eleva el significado espiritual del planeta."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RYa hemos consagrado §Y[This.GetMaximumConsecratedPlanets]§! mundos§! §H(Desacraliza otro mundo para consagrar este)§!"

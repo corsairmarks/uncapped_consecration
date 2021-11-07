@@ -1,0 +1,4 @@
+﻿l_polish:
+ describe_edict_consectrated_worlds: "§EUświęcanie niezamieszkałych globów[This.GetLimitConsecratedPlanets] zwiększa §Yatrakcyjność etyki duchowości§! i §Yudogodnienia imperialne§!, jak również £unity£ §Ygenerowanie jedności§! w stopniu zależnym od duchowego znaczenia uświęconych światów.§!"
+ decision_consecrated_worlds_effects_custom: "Dodaje ten glob to naszego kanonu świętych światów[This.GetLimitConsecratedPlanets], zwiększając §Yatrakcyjność etyki duchowości§!, §Yudogodnienia imperialne§! i £unity£ §Ygenerowanie jedności§!, odpowiednio do duchowego znaczenia kolonii."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RUświęciliśmy już §Y[This.GetMaximumConsecratedPlanets]§! światy§! §H(Odbierz status świętości innemu światu, by uświęcić ten).§!"

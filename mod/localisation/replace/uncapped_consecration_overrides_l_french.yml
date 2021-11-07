@@ -1,0 +1,4 @@
+﻿l_french:
+ describe_edict_consectrated_worlds: "§EConsacrer des mondes inhabités[This.GetLimitConsecratedPlanets] accroît l'attractivité de l'éthique §Yspiritualiste§! et les §Yservices dans l'empire§!, et suscite un regain d'£unity£§Yunité§!, selon l'importance spirituelle des mondes ainsi consacrés.§!"
+ decision_consecrated_worlds_effects_custom: "Ajoute ce monde à la liste des mondes consacrés[This.GetLimitConsecratedPlanets] dans nos canons. Cela va accroître l'attractivité de l'éthique §Yspiritualiste§!, la production des £amenities£§Yservices dans l'empire§! et susciter un surcroît d'£unity£§Yunité§! selon l'importance spirituelle de ce monde."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$ §RNous avons déjà consacré §Y[This.GetMaximumConsecratedPlanets]§! mondes§! §H(nous devons donc déconsacrer un autre monde pour pouvoir consacrer celui-ci)§!"

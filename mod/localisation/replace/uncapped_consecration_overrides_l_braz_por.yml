@@ -1,0 +1,4 @@
+﻿l_braz_por:
+ describe_edict_consectrated_worlds: "§EConsagrar planetas não habitados[This.GetLimitConsecratedPlanets] aumenta a §YAtração de Ética Espiritualista§! e os §YConfortos Imperiais§! além de melhorar a £unity£ §YGeração de Unidade§!, contribuindo para o significado espiritual dos mundos consagrados.§!"
+ decision_consecrated_worlds_effects_custom: "Adiciona este mundo ao nosso cânone de Mundos Consagrados[This.GetLimitConsecratedPlanets], aumentando a §YAtração de Ética Espiritualista§!, os §YConfortos por Todo o Império§! e impulsionando a £unity£ §YGeração de Unidade§!, escalando o significado espiritual do planeta."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RJá consagramos §Y[This.GetMaximumConsecratedPlanets]§! mundos§! §H(Desconsagre outro mundo para consagrar este)§!"

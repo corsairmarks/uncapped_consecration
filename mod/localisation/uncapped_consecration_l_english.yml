@@ -1,5 +1,5 @@
 ﻿l_english:
- uncapped_consecration.1.title: "Consecrated World Limit"
+ uncapped_consecration.1.title: "$ap_consecrated_worlds$"
  uncapped_consecration.1.desc: "What is the maximum number of worlds that should be able to be consecrated by an empire with the §H$ap_consecrated_worlds$§! ascension perk? The default amount is three planets."
  uncapped_consecration.1.a: "1"
  uncapped_consecration.1.b: "2"
@@ -12,3 +12,5 @@
  uncapped_consecration.1.i: "9"
  uncapped_consecration.1.j: "10"
  uncapped_consecration.1.k: "Unlimited"
+ limit_consecrated_planets: " (up to §Y[This.GetMaximumConsecratedPlanets]§!)"
+ numeric_consecrated_planets_per_country: "[event_target:global_event_country.max_consecrated_planets_per_country]" # event_target: required for global targets

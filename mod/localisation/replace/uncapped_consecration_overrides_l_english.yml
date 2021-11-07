@@ -1,0 +1,7 @@
+﻿l_english:
+ describe_edict_consectrated_worlds: "§EConsecrating uninhabited planets[This.GetLimitConsecratedPlanets] increases §YSpiritualist Ethics Attraction§! and §YEmpire-Wide Amenities§! as well as £unity£ §YUnity Generation§!, scaling to the spiritual significance of the worlds consecrated.§!"
+ decision_consecrated_worlds_effects_custom: "Adds this world to our canon of Consecrated Worlds[This.GetLimitConsecratedPlanets], increasing §YSpiritualist Ethics Attraction§!, §YEmpire-Wide Amenities§! and boosting £unity£ §YUnity Generation§!, scaling to the spiritual significance of the planet."
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§RWe have already consecrated §Y[This.GetMaximumConsecratedPlanets]§! worlds§! §H(Deconsecrate another world to consecrate this one)§!"
+ unconsecrated_world_tooltip: "§RDeconsecrates§! world"
+ decision_unconsecrated_worlds: "Deconsecrate World"
+ mega.100.desc: "We have lost access to the objects of worship in the [From.GetName] system!\n\nGrief and a profound sense of loss grips the [Root.GetAdj] colonies. Different from a world being declared deconsecrated, this violent denial of spiritual agency leaves the believers of [Root.GetName] shell-shocked and disoriented. The clergy have decreed a half-decade of mourning."

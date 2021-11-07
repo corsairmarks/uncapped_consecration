@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ describe_edict_consectrated_worlds: "§E将未殖民行星封为圣地[This.GetLimitConsecratedPlanets]可提升§Y唯心主义思潮吸引力§!、§Y帝国舒适度§!及£unity£§Y凝聚力产出§!，具体效果视乎于该行星的宗教影响力。§!"
+ decision_consecrated_worlds_effects_custom: "将此行星封为圣地（最多§Y3§!个）提升§Y唯心主义物种思潮吸引力§!、§Y帝国舒适度§!、以及£unity£ §Y凝聚力产出§!，具体效果视乎于该行星的宗教影响力。"
+ consecrated_worlds_too_many: "$TRIGGER_FAIL$§R我方已经祝圣了§Y[This.GetMaximumConsecratedPlanets]§!个世界§!§H（取消其它世界的圣地状态后，可以将此世界封为圣地）§!"

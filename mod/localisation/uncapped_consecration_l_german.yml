@@ -11,4 +11,6 @@
  uncapped_consecration.1.h: "8"
  uncapped_consecration.1.i: "9"
  uncapped_consecration.1.j: "10"
- uncapped_consecration.1.k: "Unlimited"
+ uncapped_consecration.1.k: "Keine begrenzung"
+ limit_consecrated_planets: " (bis zu §Y[This.GetMaximumConsecratedPlanets]§!)"
+ numeric_consecrated_planets_per_country: "[event_target:global_event_country.max_consecrated_planets_per_country]" # event_target: required for global targets
