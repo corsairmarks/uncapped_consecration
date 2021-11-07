@@ -5,7 +5,7 @@ recalculate_consecrated_world_modifier = {
         remove_modifier = consecrated_modifier_1
     }
     set_variable = {
-        which = num_consecrated_planets
+        which = level_consecrated_planets
         value = 0
     }
     every_galaxy_planet = {
@@ -22,7 +22,7 @@ recalculate_consecrated_world_modifier = {
             limit = { has_modifier = consecrated_quality_1 }
             prev = {
                 change_variable = {
-                    which = num_consecrated_planets
+                    which = level_consecrated_planets
                     value = 1
                 }
             }
@@ -31,7 +31,7 @@ recalculate_consecrated_world_modifier = {
             limit = { has_modifier = consecrated_quality_2 }
             prev = {
                 change_variable = {
-                    which = num_consecrated_planets
+                    which = level_consecrated_planets
                     value = 2
                 }
             }
@@ -40,7 +40,7 @@ recalculate_consecrated_world_modifier = {
             limit = { has_modifier = consecrated_quality_3 }
             prev = {
                 change_variable = {
-                    which = num_consecrated_planets
+                    which = level_consecrated_planets
                     value = 3
                 }
             }
@@ -49,14 +49,26 @@ recalculate_consecrated_world_modifier = {
             limit = { has_modifier = consecrated_quality_4 }
             prev = {
                 change_variable = {
-                    which = num_consecrated_planets
+                    which = level_consecrated_planets
                     value = 4
                 }
             }
         }
     }
-    add_modifier = {
-        modifier = consecrated_modifier_1
-        multiplier = num_consecrated_planets
+    if = {
+        limit = { is_variable_set = level_consecrated_planets } # this check is necessary to not spam the error log when mousing over the Consecrate World decision
+        if = {
+            limit = {
+                check_variable = {
+                    which = level_consecrated_planets
+                    value > 0
+                }
+            }
+            add_modifier = {
+                modifier = consecrated_modifier_1
+                multiplier = level_consecrated_planets
+            }
+        }
+        clear_variable = level_consecrated_planets
     }
 }
