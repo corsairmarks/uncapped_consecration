@@ -18,6 +18,18 @@ The Consecrated Worlds Worship modifier is now applied via a dynamic multiplier 
 
 ## Compatibility
 
+While this mod does replace some built-in gameplay objects, it should generally play nicely with other mods as long a they do not also adjust Consecrated Worlds.
+
+Not included in my compilation mod [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089).  This mod is compatible with the compilation.
+
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+
+### When to Install
+
+This mod can be safely added after the game has started and should be safe to remove.  After removing the mod, your game will revert to the built-in behavior for Consecrated Worlds (although you will not lose any if you exceed the base cap of 3).  Always backup your savegame before attempting to remove a mod.
+
+### Known Issues
+
 Overwriting effects and planetary decisions a well as preempting events result in the game logging error messages when first launching.  Expect to see five lines in error.log similar to these:
 
 ```
