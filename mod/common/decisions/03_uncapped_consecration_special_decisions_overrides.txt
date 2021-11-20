@@ -226,4 +226,12 @@ decision_unconsecrated_worlds = {
 			}
 		}
 	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			habitable_planet = yes
+			has_modifier = consecrated_quality_1
+		}
+	}
 }
