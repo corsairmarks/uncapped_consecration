@@ -22,7 +22,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089).  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### When to Install
 
@@ -43,6 +43,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.1.0 Mark as compatible with Stellaris 3.2 "Herbert" - no script changes
 
 ## Source Code
 
