@@ -12,6 +12,7 @@ planet_event = {
 		has_planet_flag = consecrated@space_owner
 	}
 	immediate = {
+		remove_planet_flag = consecrated@space_owner
 		switch = {
 			trigger = has_modifier
 			consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
@@ -48,7 +49,7 @@ country_event = {
 				remove_planet_flag = consecrated@root
 				switch = {
 					trigger = has_modifier
-					consecrated_quality_4 = { remove_modifier = consecrated_quality_4 } # original file has a bug here - was removing consecrated_quality_3
+					consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
 					consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
 					consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
 					consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
