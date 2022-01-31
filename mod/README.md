@@ -12,7 +12,7 @@ Almost all text altered by this mod is localised into all eight languages suppor
 
 # Changes
 
-When consecrating or deconsecrating a world, the game dynamically calculates the correct bonus for Consecrated World Worship.  In order to accomplish this, it wa necessary to overwrite an effect (`recalculate_consecrated_world_modifier`) and the decisions (`decision_consecrated_worlds` and `decision_unconsecrated_worlds`) as well as preempt the events (`mega.100` and `mega.110`) that deal with consecration.
+When consecrating or deconsecrating a world, the game dynamically calculates the correct bonus for Consecrated World Worship.  In order to accomplish this, it was necessary to overwrite an effect (`recalculate_consecrated_world_modifier`) and the decisions (`decision_consecrated_worlds` and `decision_unconsecrated_worlds`) as well as preempt the events (`mega.100` and `mega.110`) that deal with consecration.
 
 The Consecrated Worlds Worship modifier is now applied via a dynamic multiplier and can now scale infinitely instead of capping out at a total of twelve "levels" of Consecrated Worlds Worship.
 
@@ -22,7 +22,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089).  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### When to Install
 
@@ -33,17 +33,20 @@ This mod can be safely added after the game has started and should be safe to re
 Overwriting effects and planetary decisions a well as preempting events result in the game logging error messages when first launching.  Expect to see five lines in error.log similar to these:
 
 ```
-[15:48:05][game_singleobjectdatabase.h:147]: Object with key: recalculate_consecrated_world_modifier already exists
-[15:48:05][eventmanager.cpp:355]: an event with id [mega.110] already exists!  file: events/megacorp_events.txt line: 12
-[15:48:05][eventmanager.cpp:355]: an event with id [mega.100] already exists!  file: events/megacorp_events.txt line: 73
-[15:48:06][game_singleobjectdatabase.h:147]: Object with key: decision_consecrated_worlds already exists
-[15:48:06][game_singleobjectdatabase.h:147]: Object with key: decision_unconsecrated_worlds already exists
+[00:57:53][game_singleobjectdatabase.h:147]: Object with key: recalculate_consecrated_world_modifier already exists, using the one at  file: common/scripted_effects/zz__uncapped_consecration_caravaneer_scripted_effects_overrides.txt line: 2
+[00:57:54][eventmanager.cpp:361]: an event with id [mega.110] already exists!  file: events/megacorp_events.txt line: 12
+[00:57:54][eventmanager.cpp:361]: an event with id [mega.100] already exists!  file: events/megacorp_events.txt line: 78
+[00:57:54][game_singleobjectdatabase.h:147]: Object with key: decision_consecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 2
+[00:57:54][game_singleobjectdatabase.h:147]: Object with key: decision_unconsecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 168
 ```
 
 ## Changelog
 
 * 1.0.0 Initial version
 * 1.1.0 Mark as compatible with Stellaris 3.2 "Herbert" - no script changes
+* 2.0.0 Update for Stellaris version 3.3.0 "Libra"
+    * Integrate updated logic for Consecrated Worlds added in version 3.3 "Libra"
+    * Update decisions to cost Unity instead of Influence
 
 ## Source Code
 
