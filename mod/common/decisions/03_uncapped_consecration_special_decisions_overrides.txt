@@ -3,7 +3,7 @@ decision_consecrated_worlds = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			unity = 500
 		}
 	}
 	potential = {
@@ -169,7 +169,7 @@ decision_unconsecrated_worlds = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			unity = 500
 		}
 	}
 	potential = {
