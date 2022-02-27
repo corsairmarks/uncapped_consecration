@@ -44,7 +44,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
 
 * 1.0.0 Initial version
 * 1.1.0 Mark as compatible with Stellaris 3.2 "Herbert" - no script changes
-* 2.0.0 Update for Stellaris version 3.3.0 "Libra"
+* 2.0.0 Update for Stellaris version 3.3 "Libra"
     * Integrate updated logic for Consecrated Worlds added in version 3.3 "Libra"
     * Update decisions to cost Unity instead of Influence
 
