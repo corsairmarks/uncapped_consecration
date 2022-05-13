@@ -18,7 +18,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url].  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 [h3]When to Install[/h3]
 This mod can be safely added after the game has started and should be safe to remove.  After removing the mod, your game will revert to the built-in behavior for Consecrated Worlds (although you will not lose any if you exceed the base cap of 3).  Always backup your savegame before attempting to remove a mod.
