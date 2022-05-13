@@ -1,5 +1,6 @@
 # this = country, consecrator
 recalculate_consecrated_world_modifier = {
+    optimize_memory
     if = {
         limit = { has_modifier = consecrated_modifier_1 }
         remove_modifier = consecrated_modifier_1

@@ -1,5 +1,6 @@
 # Divine Enforcer effect
 spawn_consecration_divine_effect = {
+	optimize_memory
 	create_ambient_object = {
 		location = this
 		type = consecration_divine_object
