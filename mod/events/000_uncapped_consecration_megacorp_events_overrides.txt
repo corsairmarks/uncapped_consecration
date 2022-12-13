@@ -13,14 +13,11 @@ planet_event = {
 	}
 	immediate = {
 		remove_planet_flag = consecrated@space_owner
-		switch = {
-			trigger = has_modifier
-			consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
-			consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
-			consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
-			consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
+		remove_consecrated_modifier = yes
+		space_owner = {
+			consecrated_modifier_removed = yes
+			recalculate_consecrated_world_modifier = yes
 		}
-		space_owner = { recalculate_consecrated_world_modifier = yes }
 	}
 }
 
@@ -47,13 +44,8 @@ country_event = {
 			every_system_planet = {
 				limit = { has_planet_flag = consecrated@root }
 				remove_planet_flag = consecrated@root
-				switch = {
-					trigger = has_modifier
-					consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
-					consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
-					consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
-					consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
-				}
+				remove_consecrated_modifier = yes
+				root = { consecrated_modifier_removed = yes }
 			}
 		}
 		recalculate_consecrated_world_modifier = yes

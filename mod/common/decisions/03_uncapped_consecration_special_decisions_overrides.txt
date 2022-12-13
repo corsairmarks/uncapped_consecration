@@ -103,7 +103,19 @@ decision_consecrated_worlds = {
 						}
 						add_modifier = { modifier = consecrated_quality_1 }
 					}
-					20 = { add_modifier = { modifier = consecrated_quality_2 } }
+					20 = {
+						add_modifier = { modifier = consecrated_quality_2 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_1_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
 				}
 			}
 			else_if = {
@@ -111,8 +123,58 @@ decision_consecrated_worlds = {
 				custom_tooltip = consecrated_worlds_unsuitable
 				random_list = {
 					10 = { add_modifier = { modifier = consecrated_quality_1 } }
-					70 = { add_modifier = { modifier = consecrated_quality_2 } }
-					20 = { add_modifier = { modifier = consecrated_quality_3 } }
+					70 = {
+						add_modifier = { modifier = consecrated_quality_2 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_1_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
+					20 = {
+						modifier = {
+							add = 20
+							root.space_owner = { has_origin = origin_toxic_knights }
+							is_planet_class = pc_toxic
+						}
+						add_modifier = { modifier = consecrated_quality_3 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_2_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
+					0 = {
+						modifier = {
+							add = 20
+							root.space_owner = { has_origin = origin_toxic_knights }
+							is_planet_class = pc_toxic
+						}
+						add_modifier = {
+							modifier = consecrated_quality_4
+							days = -1
+						}
+						create_ambient_object = {
+							type = consecrated_planet_stage_3_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
 				}
 			}
 			else_if = {
@@ -122,21 +184,67 @@ decision_consecrated_worlds = {
 				}
 				custom_tooltip = consecrated_worlds_suitable
 				random_list = {
-					50 = { add_modifier = { modifier = consecrated_quality_2 } }
-					40 = { add_modifier = { modifier = consecrated_quality_3 } }
-					10 = { add_modifier = { modifier = consecrated_quality_4 } }
+					50 = {
+						add_modifier = { modifier = consecrated_quality_2 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_1_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
+					40 = {
+						add_modifier = { modifier = consecrated_quality_3 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_2_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
+					10 = {
+						add_modifier = { modifier = consecrated_quality_4 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_3_object
+							location = this
+
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@prev
+							}
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = { is_planet_class = pc_gaia }
 				custom_tooltip = consecrated_worlds_perfect
 				add_modifier = { modifier = consecrated_quality_4 }
+				create_ambient_object = {
+					type = consecrated_planet_stage_3_object
+					location = this
+
+					use_3d_location = yes
+					entity_scale_to_size = yes
+					effect = {
+						set_ambient_object_flag = consecrated_planet@prev
+					}
+				}
 			}
 			else = {
 				# fallback
 				add_modifier = { modifier = consecrated_quality_1 }
 			}
-			spawn_consecration_divine_effect = yes
+			# spawn_consecration_divine_effect = yes # disabled because as of 3.5 "Fornax"/Toxoids, there is a built-in consecration visual
 			from = {
 				# recalculate country modifier
 				recalculate_consecrated_world_modifier = yes
@@ -174,8 +282,11 @@ decision_unconsecrated_worlds = {
 	}
 	potential = {
 		exists = from
-		from = { has_ascension_perk = ap_consecrated_worlds }
-		has_planet_flag = consecrated@from
+		from = {
+			has_ascension_perk = ap_consecrated_worlds
+			is_country = prev.space_owner
+		}
+		has_planet_flag = consecrated@space_owner
 	}
 	allow = {
 		OR = {
@@ -187,42 +298,13 @@ decision_unconsecrated_worlds = {
 	}
 	effect = {
 		hidden_effect = {
-			remove_planet_flag = consecrated@from
 			custom_tooltip = unconsecrated_world_tooltip
-			switch = {
-				trigger = has_modifier
-				consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
-				consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
-				consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
-				consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
-			}
-			if = {
-				limit = {
-					OR = {
-						has_planet_flag = holy_world_1
-						has_planet_flag = holy_world_2
-						has_planet_flag = holy_world_3
-						has_planet_flag = holy_world_4
-					}
-					any_country = { has_country_flag = fallen_empire_2 }
-				}
-				random_country = {
-					limit = {
-						has_country_flag = fallen_empire_2
-						has_opinion_modifier = {
-							who = from
-							modifier = opinion_worships_our_holy_world
-						}
-					}
-					remove_opinion_modifier = { # Currently removes all instances of this modifier, even if several have been added
-						who = from
-						modifier = opinion_worships_our_holy_world
-					}
-				}
-			}
+			remove_planet_flag = consecrated@from
+			remove_consecrated_modifier = yes
 			from = {
-				recalculate_consecrated_world_modifier = yes
 				custom_tooltip = recalculates_consecrated_modifier
+				consecrated_modifier_removed = yes
+				recalculate_consecrated_world_modifier = yes
 			}
 		}
 	}

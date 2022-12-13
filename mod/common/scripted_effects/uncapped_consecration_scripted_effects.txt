@@ -1,4 +1,5 @@
 # Divine Enforcer effect
+# this = planet
 spawn_consecration_divine_effect = {
 	optimize_memory
 	create_ambient_object = {
@@ -13,5 +14,62 @@ spawn_consecration_divine_effect = {
 
 		entity_scale_to_size = yes
 		scale = 0.10
+	}
+}
+
+# this = planet
+remove_consecrated_modifier = {
+	optimize_memory
+	switch = {
+		trigger = has_modifier
+		consecrated_quality_4 = { remove_modifier = consecrated_quality_4 }
+		consecrated_quality_3 = { remove_modifier = consecrated_quality_3 }
+		consecrated_quality_2 = { remove_modifier = consecrated_quality_2 }
+		consecrated_quality_1 = { remove_modifier = consecrated_quality_1 }
+	}
+	solar_system = {
+		every_system_ambient_object = {
+			limit = {
+				OR = {
+					is_ambient_object_type = consecrated_planet_stage_1_object
+					is_ambient_object_type = consecrated_planet_stage_2_object
+					is_ambient_object_type = consecrated_planet_stage_3_object
+				}
+				has_ambient_object_flag = consecrated_planet@prevprev
+			}
+			destroy_ambient_object = this
+		}
+	}
+}
+
+# this = country
+# prev = planet
+consecrated_modifier_removed = {
+	optimize_memory
+	if = {
+		limit = {
+			prev = {
+				OR = {
+					has_planet_flag = holy_world_1
+					has_planet_flag = holy_world_2
+					has_planet_flag = holy_world_3
+					has_planet_flag = holy_world_4
+				}
+			}
+			any_country = { has_country_flag = fallen_empire_2 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = fallen_empire_2
+				has_opinion_modifier = {
+					who = prev
+					modifier = opinion_worships_our_holy_world
+				}
+			}
+			remove_opinion_modifier = { # Currently removes all instances of this modifier, even if several have been added
+				who = prev
+				modifier = opinion_worships_our_holy_world
+			}
+		}
 	}
 }
