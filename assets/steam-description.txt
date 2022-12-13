@@ -3,10 +3,8 @@ Do you love consecrating worlds?  Do you want [i]more[/i] consecrated worlds?  T
 
 When the game starts, you (or the host, for multiplayer) will be asked what the maximum number of consecrated worlds (per empire with the "Consecrated Worlds" ascension perk).  The game's default setting is 3, but it can be set from 1 to 10 or unlimited.  The Consecrated World Worship modifier dynamically scales based on the combined levels of all your consecrated worlds.
 
-Additionally, consecrating a world spawns the Divine Enforcer planet effects - a little graphical bonus to make the process a little prettier.  The Consecrated World modifiers now also cause planets to show their nameplates and thus be a little easier to pick them out when in the systemview.
-
 [h2]Localisation[/h2]
-Almost all text altered by this mod is localised into all eight languages supported by Stellaris.  However, the beginning-of-the-game event's description and "default" option are only available in English.  If you would like to supply a translation for one or more languages, please contact me via Steam or leave a comment.
+Almost all text altered by this mod is localised into eight of the languages supported by Stellaris.  However, the beginning-of-the-game event's description and "default" option are only available in English.  If you would like to supply a translation for one or more languages, please contact me via Steam or leave a comment.
 
 [h1]Changes[/h1]
 When consecrating or deconsecrating a world, the game dynamically calculates the correct bonus for Consecrated World Worship.  In order to accomplish this, it was necessary to overwrite an effect ([b]recalculate_consecrated_world_modifier[/b]) and the decisions ([b]decision_consecrated_worlds[/b] and [b]decision_unconsecrated_worlds[/b]) as well as preempt the events ([b]mega.100[/b] and [b]mega.110[/b]) that deal with consecration.
@@ -18,7 +16,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url].  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 [h3]When to Install[/h3]
 This mod can be safely added after the game has started and should be safe to remove.  After removing the mod, your game will revert to the built-in behavior for Consecrated Worlds (although you will not lose any if you exceed the base cap of 3).  Always backup your savegame before attempting to remove a mod.
@@ -26,11 +24,11 @@ This mod can be safely added after the game has started and should be safe to re
 [h3]Known Issues[/h3]
 Overwriting effects and planetary decisions a well as preempting events result in the game logging error messages when first launching.  Expect to see five lines in error.log similar to these:
 [code]
-[00:57:53][game_singleobjectdatabase.h:147]: Object with key: recalculate_consecrated_world_modifier already exists, using the one at  file: common/scripted_effects/zz__uncapped_consecration_caravaneer_scripted_effects_overrides.txt line: 2
-[00:57:54][eventmanager.cpp:361]: an event with id [mega.110] already exists!  file: events/megacorp_events.txt line: 12
-[00:57:54][eventmanager.cpp:361]: an event with id [mega.100] already exists!  file: events/megacorp_events.txt line: 78
-[00:57:54][game_singleobjectdatabase.h:147]: Object with key: decision_consecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 2
-[00:57:54][game_singleobjectdatabase.h:147]: Object with key: decision_unconsecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 168
+[04:30:31][game_singleobjectdatabase.h:165]: Object with key: recalculate_consecrated_world_modifier already exists, using the one at  file: common/scripted_effects/zz__uncapped_consecration_caravaneer_scripted_effects_overrides.txt line: 2
+[04:30:32][eventmanager.cpp:368]: an event with id [mega.110] already exists!  file: events/megacorp_events.txt line: 12
+[04:30:32][eventmanager.cpp:368]: an event with id [mega.100] already exists!  file: events/megacorp_events.txt line: 102
+[04:30:33][game_singleobjectdatabase.h:165]: Object with key: decision_consecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 2
+[04:30:33][game_singleobjectdatabase.h:165]: Object with key: decision_unconsecrated_worlds already exists, using the one at  file: common/decisions/03_uncapped_consecration_special_decisions_overrides.txt line: 276
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2648945546]Change Notes[/url]
@@ -38,4 +36,4 @@ See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2648945546
 [h2]Source Code[/h2]
 Hosted on [url=https://github.com/corsairmarks/uncapped_consecration]GitHub[/url]
 
-[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+[url=https://discord.gg/2qjkAF8DY7][img]https://i.imgur.com/4Und3QN.png[/img][/url]
