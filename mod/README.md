@@ -49,6 +49,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
 * 4.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Support the new built-in consecrated world visual effects
     * You will now lose the opinion bonus for consecrated holy worlds with the spiritualist fallen empire if you lose/colonize it
+* 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 
 ## Source Code
 
