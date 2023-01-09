@@ -1,18 +1,5 @@
 namespace = uncapped_consecration
 
-# flag mod as active
-event = {
-	id = uncapped_consecration.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = uncapped_consecration_installed }
-	}
-	immediate = {
-		set_global_flag = uncapped_consecration_installed
-	}
-}
-
 # triggered by on_game_start and on_single_player_save_game_load
 country_event = {
 	id = uncapped_consecration.1
