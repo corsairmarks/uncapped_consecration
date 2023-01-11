@@ -26,7 +26,7 @@ Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 This mod can be safely added after the game has started and should be safe to remove.  After removing the mod, your game will revert to the built-in behavior for Consecrated Worlds (although you will not lose any if you exceed the base cap of 3).  Always backup your savegame before attempting to remove a mod.
 
-### Known Issues
+## Known Issues
 
 Overwriting effects and planetary decisions a well as preempting events result in the game logging error messages when first launching.  Expect to see five lines in error.log similar to these:
 
