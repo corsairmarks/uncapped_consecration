@@ -1,0 +1,15 @@
+# whether this species is considered "nuked"
+# this = species
+uc_is_nuked_species = {
+	optimize_memory
+	OR = {
+		ideal_planet_class = pc_nuked
+		has_trait = trait_pc_nuked_preference
+		has_trait = trait_survivor
+		has_trait = trait_plantoid_radiotrophic
+		has_trait = trait_harvested_radiotrophic
+		has_trait = trait_lithoid_radiotrophic
+		has_trait = trait_advanced_radiotrophic
+		has_trait = trait_presapient_irradiated
+	}
+}

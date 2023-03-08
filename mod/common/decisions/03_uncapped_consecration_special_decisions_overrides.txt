@@ -98,21 +98,70 @@ decision_consecrated_worlds = {
 								is_planet_class = pc_machine
 								is_planet_class = pc_ai
 								is_planet_class = pc_city
-								is_planet_class = pc_relic
+								AND = {
+									is_planet_class = pc_relic
+									from = { is_memorialist_empire = no }
+								}
 							}
+						}
+						modifier = {
+							subtract = 70
+							is_planet_class = pc_relic
+							from = { is_memorialist_empire = yes }
 						}
 						add_modifier = { modifier = consecrated_quality_1 }
 					}
 					20 = {
+						modifier = {
+							add = 50
+							is_planet_class = pc_relic
+							from = { is_memorialist_empire = yes }
+						}
 						add_modifier = { modifier = consecrated_quality_2 }
 						create_ambient_object = {
 							type = consecrated_planet_stage_1_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
+							}
+						}
+					}
+					0 = {
+						modifier = {
+							add = 40
+							is_planet_class = pc_relic
+							from = { is_memorialist_empire = yes }
+						}
+						add_modifier = { modifier = consecrated_quality_3 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_2_object
+							location = this
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@from
+							}
+						}
+					}
+					0 = {
+						modifier = {
+							add = 20
+							is_planet_class = pc_relic
+							from = { is_memorialist_empire = yes }
+						}
+						add_modifier = {
+							modifier = consecrated_quality_4
+							days = -1
+						}
+						create_ambient_object = {
+							type = consecrated_planet_stage_3_object
+							location = this
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
@@ -128,37 +177,35 @@ decision_consecrated_worlds = {
 						create_ambient_object = {
 							type = consecrated_planet_stage_1_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
 					20 = {
 						modifier = {
 							add = 20
-							root.space_owner = { has_origin = origin_toxic_knights }
 							is_planet_class = pc_toxic
+							from = { has_origin = origin_toxic_knights }
 						}
 						add_modifier = { modifier = consecrated_quality_3 }
 						create_ambient_object = {
 							type = consecrated_planet_stage_2_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
 					0 = {
 						modifier = {
 							add = 20
-							root.space_owner = { has_origin = origin_toxic_knights }
 							is_planet_class = pc_toxic
+							from = { has_origin = origin_toxic_knights }
 						}
 						add_modifier = {
 							modifier = consecrated_quality_4
@@ -167,11 +214,10 @@ decision_consecrated_worlds = {
 						create_ambient_object = {
 							type = consecrated_planet_stage_3_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
@@ -189,37 +235,84 @@ decision_consecrated_worlds = {
 						create_ambient_object = {
 							type = consecrated_planet_stage_1_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
 					40 = {
+						modifier = {
+							add = 20
+							is_planet_class = pc_ocean
+							from = { has_origin = origin_ocean_paradise }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_ocean
+							from = { has_ascension_perk = ap_hydrocentric }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from = { has_origin = origin_post_apocalyptic }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from = { is_memorialist_empire = yes }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from.owner_main_species = { uc_is_nuked_species = yes }
+						}
 						add_modifier = { modifier = consecrated_quality_3 }
 						create_ambient_object = {
 							type = consecrated_planet_stage_2_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
 					10 = {
+						modifier = {
+							add = 20
+							is_planet_class = pc_ocean
+							from = { has_origin = origin_ocean_paradise }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_ocean
+							from = { has_ascension_perk = ap_hydrocentric }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from = { has_origin = origin_post_apocalyptic }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from = { is_memorialist_empire = yes }
+						}
+						modifier = {
+							add = 20
+							is_planet_class = pc_nuked
+							from.owner_main_species = { uc_is_nuked_species = yes }
+						}
 						add_modifier = { modifier = consecrated_quality_4 }
 						create_ambient_object = {
 							type = consecrated_planet_stage_3_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 							effect = {
-								set_ambient_object_flag = consecrated_planet@prev
+								set_ambient_object_flag = consecrated_planet@from
 							}
 						}
 					}
@@ -232,11 +325,10 @@ decision_consecrated_worlds = {
 				create_ambient_object = {
 					type = consecrated_planet_stage_3_object
 					location = this
-
 					use_3d_location = yes
 					entity_scale_to_size = yes
 					effect = {
-						set_ambient_object_flag = consecrated_planet@prev
+						set_ambient_object_flag = consecrated_planet@from
 					}
 				}
 			}
