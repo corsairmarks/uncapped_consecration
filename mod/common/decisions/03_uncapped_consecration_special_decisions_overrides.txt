@@ -77,12 +77,13 @@ decision_consecrated_worlds = {
 			if = {
 				limit = {
 					OR = {
-						is_planet_class = pc_asteroid
+						is_asteroid = yes
 						is_planet_class = pc_nuked
 						is_planet_class = pc_gas_giant
 						is_planet_class = pc_shielded
 						is_planet_class = pc_hive
 						is_planet_class = pc_machine
+						is_planet_class = pc_machine_broken
 						is_planet_class = pc_ai
 						is_planet_class = pc_city
 						is_planet_class = pc_relic
@@ -96,6 +97,7 @@ decision_consecrated_worlds = {
 							OR = {
 								is_planet_class = pc_hive
 								is_planet_class = pc_machine
+								is_planet_class = pc_machine_broken
 								is_planet_class = pc_ai
 								is_planet_class = pc_city
 								AND = {
@@ -168,10 +170,132 @@ decision_consecrated_worlds = {
 				}
 			}
 			else_if = {
-				limit = { uninhabitable_regular_planet = yes }
-				custom_tooltip = consecrated_worlds_unsuitable
+				limit = { is_planet_class = pc_shrouded }
+				if = {
+					limit = {
+						from = {
+							OR = {
+								has_origin = origin_shroudwalker_apprentice
+								has_tradition = tr_psionics_adopt
+							}
+						}
+					}
+					custom_tooltip = consecrated_worlds_suitable
+				}
+				else = {
+					custom_tooltip = consecrated_worlds_unsuitable
+				}
 				random_list = {
-					10 = { add_modifier = { modifier = consecrated_quality_1 } }
+					10 = {
+						modifier = {
+							subtract = 10
+							from = {
+								OR = {
+									has_origin = origin_shroudwalker_apprentice
+									has_tradition = tr_psionics_adopt
+								}
+							}
+						}
+						add_modifier = { modifier = consecrated_quality_1 }
+					}
+					0 = {
+						modifier = {
+							add = 70
+							from = {
+								OR = {
+									has_origin = origin_shroudwalker_apprentice
+									has_tradition = tr_psionics_adopt
+								}
+							}
+						}
+						add_modifier = { modifier = consecrated_quality_2 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_1_object
+							location = this
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@from
+							}
+						}
+					}
+					0 = {
+						modifier = {
+							add = 20
+							from = {
+								OR = {
+									has_origin = origin_shroudwalker_apprentice
+									has_tradition = tr_psionics_adopt
+								}
+							}
+						}
+						modifier = {
+							add = 20
+							from = { has_origin = origin_shroudwalker_apprentice }
+						}
+						modifier = {
+							add = 20
+							from = { has_tradition = tr_psionics_adopt }
+						}
+						add_modifier = { modifier = consecrated_quality_3 }
+						create_ambient_object = {
+							type = consecrated_planet_stage_2_object
+							location = this
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@from
+							}
+						}
+					}
+					0 = {
+						modifier = {
+							add = 20
+							from = { has_origin = origin_shroudwalker_apprentice }
+						}
+						modifier = {
+							add = 20
+							from = { has_tradition = tr_psionics_adopt }
+						}
+						add_modifier = {
+							modifier = consecrated_quality_4
+							days = -1
+						}
+						create_ambient_object = {
+							type = consecrated_planet_stage_3_object
+							location = this
+							use_3d_location = yes
+							entity_scale_to_size = yes
+							effect = {
+								set_ambient_object_flag = consecrated_planet@from
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { uninhabitable_regular_planet = yes }
+				if = {
+					limit = {
+						from = {
+							is_planet_class = pc_toxic
+							from = { has_origin = origin_toxic_knights }
+						}
+					}
+					custom_tooltip = consecrated_worlds_suitable
+				}
+				else = {
+					custom_tooltip = consecrated_worlds_unsuitable
+				}
+				random_list = {
+					10 = {
+						modifier = {
+							subtract = 10
+							is_planet_class = pc_toxic
+							from = { has_origin = origin_toxic_knights }
+						}
+						add_modifier = { modifier = consecrated_quality_1 }
+					}
 					70 = {
 						add_modifier = { modifier = consecrated_quality_2 }
 						create_ambient_object = {
