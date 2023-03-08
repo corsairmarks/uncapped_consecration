@@ -4,6 +4,8 @@ Do you love consecrating worlds?  Do you want _more_ consecrated worlds?  Then t
 
 When the game starts, you (or the host, for multiplayer) will be asked what the maximum number of consecrated worlds (per empire with the "Consecrated Worlds" ascension perk).  The game's default setting is 3, but it can be set from 1 to 10 or unlimited.  The Consecrated World Worship modifier dynamically scales based on the combined levels of all your consecrated worlds.
 
+This mod also improves the chances for your empire to get better consecration modifiers if you are predisposed to some planet types. Origin: Post-Apocalyptic, Civic: Memorialists (all versions), and empires whose main species prefer Tomb Worlds gain improved chances for Tomb Worlds (stackable). Memorialists also gain improved chances for Relic Worlds. Origin: Ocean Paradise and Hydrocentric empires gain improved chances for Ocean Worlds (stackable). Finally, Origin: Teachers of the Shroud and empires that have adopted the Psionics traditions gain improved chances on Shrouded Worlds (stackable).
+
 ## Localisation
 
 Almost all text altered by this mod is localised into eight of the languages supported by Stellaris.  However, the beginning-of-the-game event's description and "default" option are only available in English.  If you would like to supply a translation for one or more languages, please contact me via Steam or leave a comment.
@@ -50,6 +52,10 @@ Overwriting effects and planetary decisions a well as preempting events result i
     * Support the new built-in consecrated world visual effects
     * You will now lose the opinion bonus for consecrated holy worlds with the spiritualist fallen empire if you lose/colonize it
 * 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
+* 5.1.0 Improved chances for better Consecrated World levels based on empire world preferences:
+    * Origin: Post-Apocalyptic, Civic: Memorialists (all versions), and empires whose main species prefers Tomb Worlds have chances for better modifiers on Tomb Worlds (stackable)
+    * Civic: Memorialists (all versions) have a chance for better modifiers on Relic Worlds
+    * Origin: Ocean Paradise and empires with the Hydrocentric ascension perk have higher chances for better modifiers on Ocean Worlds (stackable)
 
 ## Source Code
 
