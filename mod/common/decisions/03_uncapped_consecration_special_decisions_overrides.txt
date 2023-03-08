@@ -277,10 +277,8 @@ decision_consecrated_worlds = {
 				limit = { uninhabitable_regular_planet = yes }
 				if = {
 					limit = {
-						from = {
-							is_planet_class = pc_toxic
-							from = { has_origin = origin_toxic_knights }
-						}
+						is_planet_class = pc_toxic
+						from = { has_origin = origin_toxic_knights }
 					}
 					custom_tooltip = consecrated_worlds_suitable
 				}
