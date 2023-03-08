@@ -56,6 +56,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
     * Origin: Post-Apocalyptic, Civic: Memorialists (all versions), and empires whose main species prefers Tomb Worlds have chances for better modifiers on Tomb Worlds (stackable)
     * Civic: Memorialists (all versions) have a chance for better modifiers on Relic Worlds
     * Origin: Ocean Paradise and empires with the Hydrocentric ascension perk have higher chances for better modifiers on Ocean Worlds (stackable)
+    * Origin: Teachers of the Shroud and empires that have adopted the Psionics traditions have chances for better modifiers on Shrouded Worlds (stackable)
 
 ## Source Code
 
