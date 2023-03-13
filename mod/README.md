@@ -22,7 +22,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089).  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### When to Install
 
@@ -57,6 +57,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
     * Civic: Memorialists (all versions) have a chance for better modifiers on Relic Worlds
     * Origin: Ocean Paradise and empires with the Hydrocentric ascension perk have higher chances for better modifiers on Ocean Worlds (stackable)
     * Origin: Teachers of the Shroud and empires that have adopted the Psionics traditions have chances for better modifiers on Shrouded Worlds (stackable)
+* 5.2.0 Mark as compatible with Stellaris 3.7 "Canis Minor" - no script changes
 
 ## Source Code
 
