@@ -87,6 +87,10 @@ decision_consecrated_worlds = {
 						is_planet_class = pc_ai
 						is_planet_class = pc_city
 						is_planet_class = pc_relic
+						is_pd_nuked = yes
+						is_pd_hive_world = yes
+						is_pd_machine = yes
+						is_pd_arcology = yes
 					}
 				}
 				custom_tooltip = consecrated_worlds_unsuitable
@@ -100,6 +104,9 @@ decision_consecrated_worlds = {
 								is_planet_class = pc_machine_broken
 								is_planet_class = pc_ai
 								is_planet_class = pc_city
+								is_pd_hive_world = yes
+								is_pd_machine = yes
+								is_pd_arcology = yes
 								AND = {
 									is_planet_class = pc_relic
 									from = { is_memorialist_empire = no }
@@ -170,7 +177,12 @@ decision_consecrated_worlds = {
 				}
 			}
 			else_if = {
-				limit = { is_planet_class = pc_shrouded }
+				limit = {
+					OR = {
+						is_planet_class = pc_shrouded
+						is_pd_shroud_world = yes
+					}
+				}
 				if = {
 					limit = {
 						from = {
@@ -349,6 +361,7 @@ decision_consecrated_worlds = {
 				limit = {
 					habitable_planet = yes
 					NOT = { is_planet_class = pc_gaia }
+					is_pd_gaia = no
 				}
 				custom_tooltip = consecrated_worlds_suitable
 				random_list = {
@@ -367,27 +380,42 @@ decision_consecrated_worlds = {
 					40 = {
 						modifier = {
 							add = 20
-							is_planet_class = pc_ocean
+							OR = {
+								is_planet_class = pc_ocean
+								is_pd_planet_for_aqua_trait = yes
+							}
 							from = { has_origin = origin_ocean_paradise }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_ocean
+							OR = {
+								is_planet_class = pc_ocean
+								is_pd_planet_for_aqua_trait = yes
+							}
 							from = { has_ascension_perk = ap_hydrocentric }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from = { has_origin = origin_post_apocalyptic }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from = { is_memorialist_empire = yes }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from.owner_main_species = { uc_is_nuked_species = yes }
 						}
 						add_modifier = { modifier = consecrated_quality_3 }
@@ -404,27 +432,42 @@ decision_consecrated_worlds = {
 					10 = {
 						modifier = {
 							add = 20
-							is_planet_class = pc_ocean
+							OR = {
+								is_planet_class = pc_ocean
+								is_pd_planet_for_aqua_trait = yes
+							}
 							from = { has_origin = origin_ocean_paradise }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_ocean
+							OR = {
+								is_planet_class = pc_ocean
+								is_pd_planet_for_aqua_trait = yes
+							}
 							from = { has_ascension_perk = ap_hydrocentric }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from = { has_origin = origin_post_apocalyptic }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from = { is_memorialist_empire = yes }
 						}
 						modifier = {
 							add = 20
-							is_planet_class = pc_nuked
+							OR = {
+								is_planet_class = pc_nuked
+								is_pd_nuked = yes
+							}
 							from.owner_main_species = { uc_is_nuked_species = yes }
 						}
 						add_modifier = { modifier = consecrated_quality_4 }
@@ -441,7 +484,12 @@ decision_consecrated_worlds = {
 				}
 			}
 			else_if = {
-				limit = { is_planet_class = pc_gaia }
+				limit = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_pd_gaia = yes
+					}
+				}
 				custom_tooltip = consecrated_worlds_perfect
 				add_modifier = { modifier = consecrated_quality_4 }
 				create_ambient_object = {
