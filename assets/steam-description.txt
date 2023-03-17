@@ -14,7 +14,7 @@ When consecrating or deconsecrating a world, the game dynamically calculates the
 The Consecrated Worlds Worship modifier is now applied via a dynamic multiplier and can now scale infinitely instead of capping out at a total of twelve "levels" of Consecrated Worlds Worship.
 
 [h2]Compatibility[/h2]
-While this mod does replace some built-in gameplay objects, it should generally play nicely with other mods as long a they do not also adjust Consecrated Worlds.
+While this mod does replace some built-in gameplay objects, it should generally play nicely with other mods as long a they do not also adjust Consecrated Worlds. Has built-in support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url].
 
 Not included in my compilation mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url].  This mod is compatible with the compilation.
 
