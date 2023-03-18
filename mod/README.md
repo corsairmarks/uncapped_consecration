@@ -59,6 +59,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
     * Origin: Teachers of the Shroud and empires that have adopted the Psionics traditions have chances for better modifiers on Shrouded Worlds (stackable)
 * 5.2.0 Mark as compatible with Stellaris 3.7 "Canis Minor" - no script changes
 * 5.3.0 Add built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
+* 5.4.0 Ensure all Planetary Diversity Hive and Machine Worlds are handled for consecration
 
 ## Source Code
 
