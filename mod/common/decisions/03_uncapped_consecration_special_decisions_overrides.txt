@@ -89,7 +89,9 @@ decision_consecrated_worlds = {
 						is_planet_class = pc_relic
 						is_pd_nuked = yes
 						is_pd_hive_world = yes
+						is_pd_hive_arcology = yes
 						is_pd_machine = yes
+						is_pd_robot_arcology = yes
 						is_pd_arcology = yes
 					}
 				}
@@ -105,7 +107,9 @@ decision_consecrated_worlds = {
 								is_planet_class = pc_ai
 								is_planet_class = pc_city
 								is_pd_hive_world = yes
+								is_pd_hive_arcology = yes
 								is_pd_machine = yes
+								is_pd_robot_arcology = yes
 								is_pd_arcology = yes
 								AND = {
 									is_planet_class = pc_relic

@@ -28,6 +28,13 @@ is_pd_machine = {
 
 # supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
+is_pd_robot_arcology = {
+	optimize_memory
+	always = no
+}
+
+# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+# this = planet
 is_pd_shroud_world = {
 	optimize_memory
 	always = no
@@ -43,6 +50,13 @@ is_pd_nuked = {
 # supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_hive_world = {
+	optimize_memory
+	always = no
+}
+
+# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+# this = planet
+is_pd_hive_arcology = {
 	optimize_memory
 	always = no
 }
