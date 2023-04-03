@@ -1,60 +1,56 @@
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+# Irony this is a placeholder file please ignore it
+
+### Planetary Diversity ###
+# https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+
 # this = planet
 is_pd_arcology = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_gaia = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_planet_for_aqua_trait = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_machine = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_robot_arcology = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_shroud_world = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_nuked = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_hive_world = {
 	optimize_memory
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 # this = planet
 is_pd_hive_arcology = {
 	optimize_memory
