@@ -22,7 +22,7 @@ While this mod does replace some built-in gameplay objects, it should generally 
 
 Not included in my compilation mod [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089).  This mod is compatible with the compilation.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### When to Install
 
@@ -43,7 +43,7 @@ Overwriting effects and planetary decisions a well as preempting events result i
 ## Changelog
 
 * 1.0.0 Initial version
-* 1.1.0 Mark as compatible with Stellaris 3.2 "Herbert" - no script changes
+* 1.1.0 Mark as compatible with Stellaris version 3.2 "Herbert" - no script changes
 * 2.0.0 Update for Stellaris version 3.3 "Libra"
     * Integrate updated logic for Consecrated Worlds added in version 3.3 "Libra"
     * Update decisions to cost Unity instead of Influence
@@ -57,9 +57,10 @@ Overwriting effects and planetary decisions a well as preempting events result i
     * Civic: Memorialists (all versions) have a chance for better modifiers on Relic Worlds
     * Origin: Ocean Paradise and empires with the Hydrocentric ascension perk have higher chances for better modifiers on Ocean Worlds (stackable)
     * Origin: Teachers of the Shroud and empires that have adopted the Psionics traditions have chances for better modifiers on Shrouded Worlds (stackable)
-* 5.2.0 Mark as compatible with Stellaris 3.7 "Canis Minor" - no script changes
+* 5.2.0 Mark as compatible with Stellaris version 3.7 "Canis Minor" - no script changes
 * 5.3.0 Add built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 * 5.4.0 Ensure all Planetary Diversity Hive and Machine Worlds are handled for consecration
+* 5.5.0 Mark as compatible with Stellaris version 3.8 "Gemini" - no script changes
 
 ## Source Code
 
